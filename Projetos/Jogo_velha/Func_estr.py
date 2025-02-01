@@ -68,7 +68,11 @@ def opc():
     elif Op==2:
         NovModo()
     else:
-        print('SAINDO...')
+        print('\033[31mSAINDO',end='')
+        for c in range(0,3):
+            print('.',end='')
+            sleep(0.5)
+        print('\033[m')
         return True
 
 def JogNov():
@@ -115,4 +119,8 @@ def NovModo():
     elif Esc==3:
         MaqMaq()
     else:
-        print('SAINDO...')
+        print('\033[31mSAINDO',end='')
+        for c in range(0,3):
+            print('.',end='')
+        print('\033[m]')
+        return True
